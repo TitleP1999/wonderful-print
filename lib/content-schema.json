@@ -1,0 +1,671 @@
+{
+  "groups": [
+    {
+      "key": "general",
+      "label": "แบรนด์และเมนู",
+      "description": "ชื่อเว็บไซต์ โลโก้ และข้อความเมนู"
+    },
+    {
+      "key": "hero",
+      "label": "หน้าแรก",
+      "description": "ข้อความหลักและจุดเด่นบนหน้าเปิด"
+    },
+    {
+      "key": "services",
+      "label": "บริการ",
+      "description": "หัวข้อ รายละเอียด และรูปในการ์ดบริการ"
+    },
+    {
+      "key": "portfolio",
+      "label": "หน้าแกลเลอรี",
+      "description": "ข้อความแนะนำส่วนผลงาน"
+    },
+    {
+      "key": "about",
+      "label": "เกี่ยวกับบริษัท",
+      "description": "เนื้อหาแนะนำบริษัท"
+    },
+    {
+      "key": "vision",
+      "label": "วิสัยทัศน์",
+      "description": "แนวคิด เทคโนโลยี และคุณภาพ"
+    },
+    {
+      "key": "commitment",
+      "label": "ความมุ่งมั่น",
+      "description": "เนื้อหาพันธมิตรและภาพคอลลาจ"
+    },
+    {
+      "key": "contact",
+      "label": "ข้อมูลติดต่อ",
+      "description": "ที่อยู่ โทรศัพท์ LINE แผนที่ และ QR Code"
+    }
+  ],
+  "fields": [
+    {
+      "key": "general.site_title",
+      "group": "general",
+      "label": "ชื่อบนแท็บเบราว์เซอร์",
+      "type": "text",
+      "max": 120,
+      "required": true
+    },
+    {
+      "key": "general.description",
+      "group": "general",
+      "label": "คำอธิบายเว็บไซต์สำหรับการค้นหา",
+      "type": "text",
+      "max": 300,
+      "required": true,
+      "attr": "content"
+    },
+    {
+      "key": "general.logo",
+      "group": "general",
+      "label": "โลโก้บริษัท",
+      "type": "image",
+      "max": 500,
+      "required": true,
+      "attr": "src"
+    },
+    {
+      "key": "general.top_left",
+      "group": "general",
+      "label": "ข้อความแถบบนด้านซ้าย",
+      "type": "text",
+      "max": 120,
+      "required": true
+    },
+    {
+      "key": "general.top_right",
+      "group": "general",
+      "label": "ข้อความแถบบนด้านขวา",
+      "type": "text",
+      "max": 120,
+      "required": true
+    },
+    {
+      "key": "general.nav_services",
+      "group": "general",
+      "label": "เมนูบริการ",
+      "type": "text",
+      "max": 45,
+      "required": true
+    },
+    {
+      "key": "general.nav_portfolio",
+      "group": "general",
+      "label": "เมนูผลงาน",
+      "type": "text",
+      "max": 45,
+      "required": true
+    },
+    {
+      "key": "general.nav_about",
+      "group": "general",
+      "label": "เมนูเกี่ยวกับเรา",
+      "type": "text",
+      "max": 45,
+      "required": true
+    },
+    {
+      "key": "general.nav_vision",
+      "group": "general",
+      "label": "เมนูแนวคิด",
+      "type": "text",
+      "max": 45,
+      "required": true
+    },
+    {
+      "key": "general.nav_contact",
+      "group": "general",
+      "label": "เมนูติดต่อ",
+      "type": "text",
+      "max": 45,
+      "required": true
+    },
+    {
+      "key": "general.footer",
+      "group": "general",
+      "label": "ข้อความท้ายเว็บไซต์",
+      "type": "text",
+      "max": 240,
+      "required": true
+    },
+    {
+      "key": "hero.eyebrow",
+      "group": "hero",
+      "label": "ข้อความเหนือหัวเรื่อง",
+      "type": "text",
+      "max": 160,
+      "required": true
+    },
+    {
+      "key": "hero.title",
+      "group": "hero",
+      "label": "หัวเรื่องบรรทัดแรก",
+      "type": "text",
+      "max": 60,
+      "required": true
+    },
+    {
+      "key": "hero.accent",
+      "group": "hero",
+      "label": "หัวเรื่องบรรทัดเน้น",
+      "type": "text",
+      "max": 60,
+      "required": true
+    },
+    {
+      "key": "hero.thai",
+      "group": "hero",
+      "label": "คำโปรยภาษาไทย",
+      "type": "textarea",
+      "max": 240,
+      "required": true
+    },
+    {
+      "key": "hero.description",
+      "group": "hero",
+      "label": "รายละเอียดหน้าแรก",
+      "type": "textarea",
+      "max": 700,
+      "required": true
+    },
+    {
+      "key": "hero.button",
+      "group": "hero",
+      "label": "ปุ่มหลัก",
+      "type": "text",
+      "max": 65,
+      "required": true
+    },
+    {
+      "key": "hero.secondary",
+      "group": "hero",
+      "label": "ปุ่มรอง",
+      "type": "text",
+      "max": 65,
+      "required": true
+    },
+    {
+      "key": "hero.art_caption",
+      "group": "hero",
+      "label": "คำบรรยายกราฟิก",
+      "type": "text",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "hero.benefit_1",
+      "group": "hero",
+      "label": "จุดเด่นที่ 1",
+      "type": "text",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "hero.benefit_2",
+      "group": "hero",
+      "label": "จุดเด่นที่ 2",
+      "type": "text",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "hero.benefit_3",
+      "group": "hero",
+      "label": "จุดเด่นที่ 3",
+      "type": "text",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "services.eyebrow",
+      "group": "services",
+      "label": "ข้อความกำกับหัวข้อ",
+      "type": "text",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "services.heading",
+      "group": "services",
+      "label": "หัวข้อหลัก",
+      "type": "textarea",
+      "max": 180,
+      "required": true
+    },
+    {
+      "key": "portfolio.eyebrow",
+      "group": "portfolio",
+      "label": "ข้อความกำกับหัวข้อ",
+      "type": "text",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "portfolio.heading",
+      "group": "portfolio",
+      "label": "หัวข้อหลัก",
+      "type": "textarea",
+      "max": 180,
+      "required": true
+    },
+    {
+      "key": "about.eyebrow",
+      "group": "about",
+      "label": "ข้อความกำกับหัวข้อ",
+      "type": "text",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "about.heading",
+      "group": "about",
+      "label": "หัวข้อหลัก",
+      "type": "textarea",
+      "max": 180,
+      "required": true
+    },
+    {
+      "key": "vision.eyebrow",
+      "group": "vision",
+      "label": "ข้อความกำกับหัวข้อ",
+      "type": "text",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "vision.heading",
+      "group": "vision",
+      "label": "หัวข้อหลัก",
+      "type": "textarea",
+      "max": 180,
+      "required": true
+    },
+    {
+      "key": "commitment.eyebrow",
+      "group": "commitment",
+      "label": "ข้อความกำกับหัวข้อ",
+      "type": "text",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "commitment.heading",
+      "group": "commitment",
+      "label": "หัวข้อหลัก",
+      "type": "textarea",
+      "max": 180,
+      "required": true
+    },
+    {
+      "key": "services.intro",
+      "group": "services",
+      "label": "ข้อความแนะนำ",
+      "type": "textarea",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "portfolio.intro",
+      "group": "portfolio",
+      "label": "ข้อความแนะนำ",
+      "type": "textarea",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "services.title_1",
+      "group": "services",
+      "label": "ชื่อบริการ 1",
+      "type": "text",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "services.description_1",
+      "group": "services",
+      "label": "รายละเอียดบริการ 1",
+      "type": "textarea",
+      "max": 350,
+      "required": true
+    },
+    {
+      "key": "services.image_1",
+      "group": "services",
+      "label": "รูปบริการ 1",
+      "type": "image",
+      "max": 500,
+      "required": true,
+      "attr": "src"
+    },
+    {
+      "key": "services.title_2",
+      "group": "services",
+      "label": "ชื่อบริการ 2",
+      "type": "text",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "services.description_2",
+      "group": "services",
+      "label": "รายละเอียดบริการ 2",
+      "type": "textarea",
+      "max": 350,
+      "required": true
+    },
+    {
+      "key": "services.image_2",
+      "group": "services",
+      "label": "รูปบริการ 2",
+      "type": "image",
+      "max": 500,
+      "required": true,
+      "attr": "src"
+    },
+    {
+      "key": "services.title_3",
+      "group": "services",
+      "label": "ชื่อบริการ 3",
+      "type": "text",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "services.description_3",
+      "group": "services",
+      "label": "รายละเอียดบริการ 3",
+      "type": "textarea",
+      "max": 350,
+      "required": true
+    },
+    {
+      "key": "services.image_3",
+      "group": "services",
+      "label": "รูปบริการ 3",
+      "type": "image",
+      "max": 500,
+      "required": true,
+      "attr": "src"
+    },
+    {
+      "key": "services.title_4",
+      "group": "services",
+      "label": "ชื่อบริการ 4",
+      "type": "text",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "services.description_4",
+      "group": "services",
+      "label": "รายละเอียดบริการ 4",
+      "type": "textarea",
+      "max": 350,
+      "required": true
+    },
+    {
+      "key": "services.image_4",
+      "group": "services",
+      "label": "รูปบริการ 4",
+      "type": "image",
+      "max": 500,
+      "required": true,
+      "attr": "src"
+    },
+    {
+      "key": "about.quote",
+      "group": "about",
+      "label": "ข้อความเน้นเกี่ยวกับบริษัท",
+      "type": "textarea",
+      "max": 300,
+      "required": true
+    },
+    {
+      "key": "about.paragraph_1",
+      "group": "about",
+      "label": "เนื้อหาเกี่ยวกับบริษัท ย่อหน้า 1",
+      "type": "textarea",
+      "max": 2500,
+      "required": true
+    },
+    {
+      "key": "about.paragraph_2",
+      "group": "about",
+      "label": "เนื้อหาเกี่ยวกับบริษัท ย่อหน้า 2",
+      "type": "textarea",
+      "max": 2500,
+      "required": true
+    },
+    {
+      "key": "vision.intro",
+      "group": "vision",
+      "label": "ข้อความวิสัยทัศน์",
+      "type": "textarea",
+      "max": 1500,
+      "required": true
+    },
+    {
+      "key": "vision.paragraph_1",
+      "group": "vision",
+      "label": "รายละเอียดคุณภาพ ย่อหน้า 1",
+      "type": "textarea",
+      "max": 2500,
+      "required": true
+    },
+    {
+      "key": "vision.paragraph_2",
+      "group": "vision",
+      "label": "รายละเอียดคุณภาพ ย่อหน้า 2",
+      "type": "textarea",
+      "max": 2500,
+      "required": true
+    },
+    {
+      "key": "commitment.paragraph_1",
+      "group": "commitment",
+      "label": "เนื้อหาความมุ่งมั่น ย่อหน้า 1",
+      "type": "textarea",
+      "max": 2500,
+      "required": true
+    },
+    {
+      "key": "commitment.paragraph_2",
+      "group": "commitment",
+      "label": "เนื้อหาความมุ่งมั่น ย่อหน้า 2",
+      "type": "textarea",
+      "max": 2500,
+      "required": true
+    },
+    {
+      "key": "commitment.image_back",
+      "group": "commitment",
+      "label": "ภาพคอลลาจด้านหลัง",
+      "type": "image",
+      "max": 500,
+      "required": true,
+      "attr": "src"
+    },
+    {
+      "key": "commitment.image_front",
+      "group": "commitment",
+      "label": "ภาพคอลลาจด้านหน้า",
+      "type": "image",
+      "max": 500,
+      "required": true,
+      "attr": "src"
+    },
+    {
+      "key": "commitment.idea",
+      "group": "commitment",
+      "label": "ข้อความเหนือคอลลาจ",
+      "type": "text",
+      "max": 60,
+      "required": true
+    },
+    {
+      "key": "commitment.made",
+      "group": "commitment",
+      "label": "ข้อความหลักในคอลลาจ",
+      "type": "textarea",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "contact.eyebrow",
+      "group": "contact",
+      "label": "ข้อความกำกับส่วนติดต่อ",
+      "type": "text",
+      "max": 100,
+      "required": true
+    },
+    {
+      "key": "contact.heading",
+      "group": "contact",
+      "label": "หัวข้อชวนติดต่อ",
+      "type": "textarea",
+      "max": 180,
+      "required": true
+    },
+    {
+      "key": "contact.intro",
+      "group": "contact",
+      "label": "คำมั่นสัญญาของบริษัท",
+      "type": "textarea",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "contact.company",
+      "group": "contact",
+      "label": "ชื่อบริษัท",
+      "type": "text",
+      "max": 160,
+      "required": true
+    },
+    {
+      "key": "contact.address",
+      "group": "contact",
+      "label": "ที่อยู่บริษัท",
+      "type": "textarea",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "contact.phone_1",
+      "group": "contact",
+      "label": "เบอร์โทรศัพท์ 1",
+      "type": "phone",
+      "max": 35,
+      "required": true
+    },
+    {
+      "key": "contact.phone_2",
+      "group": "contact",
+      "label": "เบอร์โทรศัพท์ 2",
+      "type": "phone",
+      "max": 35,
+      "required": true
+    },
+    {
+      "key": "contact.line_url",
+      "group": "contact",
+      "label": "ลิงก์ LINE",
+      "type": "url",
+      "max": 500,
+      "required": true,
+      "attr": "href"
+    },
+    {
+      "key": "contact.map_url",
+      "group": "contact",
+      "label": "ลิงก์ Google Maps",
+      "type": "url",
+      "max": 800,
+      "required": true,
+      "attr": "href"
+    },
+    {
+      "key": "contact.line_qr",
+      "group": "contact",
+      "label": "QR Code สำหรับ LINE",
+      "type": "image",
+      "max": 500,
+      "required": true,
+      "attr": "src"
+    }
+  ],
+  "defaults": {
+    "general.site_title": "WONDERFUL PRINT — Creative Printing & Signage Solutions",
+    "general.description": "งานพิมพ์ดิจิทัล ป้ายโฆษณา และสื่อจัดแสดงครบวงจร โดย Wonderful Print",
+    "general.logo": "/company-logo-transparent.png",
+    "general.top_left": "CREATIVE PRINTING & SIGNAGE SOLUTIONS",
+    "general.top_right": "YOUR TRUSTED PRINTING PARTNER",
+    "general.nav_services": "บริการ",
+    "general.nav_portfolio": "ผลงาน",
+    "general.nav_about": "เกี่ยวกับเรา",
+    "general.nav_vision": "แนวคิดของเรา",
+    "general.nav_contact": "ติดต่อเรา ↗",
+    "general.footer": "© WONDERFUL PRINT CO., LTD.   |   CREATIVE PRINTING & SIGNAGE SOLUTIONS",
+    "hero.eyebrow": "YOUR PRINTING PARTNER   /   SINCE EVERY IDEA MATTERS",
+    "hero.title": "Print your",
+    "hero.accent": "possibilities.",
+    "hero.thai": "เปลี่ยนทุกไอเดียให้โดดเด่น\nด้วยงานพิมพ์ที่สร้างความประทับใจ",
+    "hero.description": "บริการผลิตป้ายโฆษณา สื่อสิ่งพิมพ์ และงานพิมพ์ดิจิทัลครบวงจร พร้อมเป็นพันธมิตรที่เติบโตไปกับธุรกิจของคุณ",
+    "hero.button": "สำรวจบริการของเรา ↗",
+    "hero.secondary": "รู้จักเราเพิ่มเติม",
+    "hero.art_caption": "สีสันที่ทำให้ไอเดียมีชีวิต",
+    "hero.benefit_1": "งานพิมพ์คุณภาพ",
+    "hero.benefit_2": "สีสันคมชัด ใส่ใจรายละเอียด",
+    "hero.benefit_3": "พันธมิตรที่คุณไว้วางใจ",
+    "services.eyebrow": "WHAT WE DO / บริการของเรา",
+    "services.heading": "Solutions made\nto stand out.",
+    "portfolio.eyebrow": "SELECTED WORK / ผลงานและงานติดตั้ง",
+    "portfolio.heading": "Ideas made real.\nDetails that matter.",
+    "about.eyebrow": "01 / ABOUT US",
+    "about.heading": "More than print.\nMade with purpose.",
+    "vision.eyebrow": "02 / OUR VISION",
+    "vision.heading": "Quality in every\ndetail.",
+    "commitment.eyebrow": "03 / OUR COMMITMENT",
+    "commitment.heading": "Growing together,\nbeautifully.",
+    "services.intro": "จากงานพิมพ์สู่พื้นที่และประสบการณ์ของแบรนด์ เราพร้อมสร้างสรรค์สื่อที่เหมาะกับการใช้งานทั้งภายในและภายนอกอาคาร",
+    "portfolio.intro": "ชมผลงานจริง ตั้งแต่งานพิมพ์และสื่อหน้าร้าน ไปจนถึงการติดตั้งหน้างาน เลือกประเภทงานที่คุณสนใจ แล้วคลิกภาพเพื่อดูรายละเอียด",
+    "services.title_1": "งานพิมพ์ดิจิทัล",
+    "services.description_1": "งานพิมพ์ Indoor & Outdoor สติกเกอร์ และวอลเปเปอร์",
+    "services.image_1": "portfolio/970-thumb.webp",
+    "services.title_2": "ป้ายโฆษณา",
+    "services.description_2": "ป้ายประชาสัมพันธ์ ป้ายหน้าร้าน และป้ายไฟ",
+    "services.image_2": "portfolio/1017-thumb.webp",
+    "services.title_3": "อุปกรณ์จัดแสดง",
+    "services.description_3": "สแตนดี้ ธงญี่ปุ่น และอุปกรณ์จัดแสดงสินค้า",
+    "services.image_3": "portfolio/969-thumb.webp",
+    "services.title_4": "สื่อสร้างสรรค์",
+    "services.description_4": "ดิสเพลย์ บูธ และสื่อส่งเสริมการขายที่เติมตัวตนให้แบรนด์",
+    "services.image_4": "portfolio/978-thumb.webp",
+    "about.quote": "เราเชื่อว่างานพิมพ์ที่ดี\nช่วยสร้างโอกาสให้ธุรกิจได้มากกว่า",
+    "about.paragraph_1": "บริษัท วันเดอร์ฟูล ปริ้น จำกัด ดำเนินธุรกิจด้านการผลิตป้ายโฆษณา สื่อสิ่งพิมพ์ และงานพิมพ์ดิจิทัลครบวงจร โดยมุ่งเน้นการนำเทคโนโลยีการผลิตที่ทันสมัยมาผสานกับความเชี่ยวชาญของทีมงาน เพื่อสร้างสรรค์ผลงานที่มีคุณภาพและตอบสนองความต้องการของลูกค้าในทุกระดับ",
+    "about.paragraph_2": "เราครอบคลุมงานผลิตหลากหลายรูปแบบ ด้วยความพร้อมด้านเครื่องจักร อุปกรณ์ และกระบวนการผลิตที่มีประสิทธิภาพ พร้อมดูแลทุกรายละเอียดเพื่อให้งานแต่ละชิ้นสื่อสารตัวตนของธุรกิจคุณได้อย่างลงตัว",
+    "vision.intro": "เราเชื่อว่าสื่อโฆษณาและงานพิมพ์ที่มีคุณภาพ คือส่วนสำคัญในการสร้างความโดดเด่นและเพิ่มโอกาสทางธุรกิจให้กับลูกค้า",
+    "vision.paragraph_1": "เราให้ความสำคัญกับคุณภาพในทุกขั้นตอนการผลิต ด้วยเครื่องพิมพ์ดิจิทัลและเทคโนโลยีการพิมพ์ที่ทันสมัยจาก HP และ EPSON รองรับงานพิมพ์หลากหลายประเภท ให้สีสันคมชัด รายละเอียดแม่นยำ และได้มาตรฐาน",
+    "vision.paragraph_2": "ผสานกับทีมงานที่มีความรู้และประสบการณ์ พร้อมควบคุมคุณภาพในทุกกระบวนการ เพื่อส่งมอบผลงานที่ตรงตามความต้องการและสอดคล้องกับการใช้งานของลูกค้า",
+    "commitment.paragraph_1": "เราไม่ได้เป็นเพียงผู้ผลิตงานพิมพ์ แต่พร้อมเป็นส่วนหนึ่งของความสำเร็จทางธุรกิจของคุณ เป็นพันธมิตรด้านงานพิมพ์และสื่อโฆษณาที่เติบโตไปพร้อมกับลูกค้า ด้วยความมุ่งมั่นในการส่งมอบสิ่งที่ดีที่สุดในทุกผลงาน",
+    "commitment.paragraph_2": "เราจึงไม่หยุดพัฒนาศักยภาพการผลิต ยกระดับมาตรฐานการทำงาน และให้ความสำคัญกับทุกรายละเอียด เพื่อให้ทุกผลงานสะท้อนถึงคุณภาพ ความน่าเชื่อถือ และความเป็นมืออาชีพ",
+    "commitment.image_back": "portfolio/967-thumb.webp",
+    "commitment.image_front": "portfolio/978-thumb.webp",
+    "commitment.idea": "YOUR IDEA.",
+    "commitment.made": "MADE\nWONDERFUL.",
+    "contact.eyebrow": "OUR PROMISE",
+    "contact.heading": "Let’s create something wonderful.",
+    "contact.intro": "คุณภาพที่เชื่อถือได้ บริการที่ไว้วางใจ และผลงานที่สร้างคุณค่าให้ธุรกิจ",
+    "contact.company": "บริษัท วันเดอร์ฟูล ปริ้น จำกัด",
+    "contact.address": "52/80 ซ.ประชาอุทิศ 72\nแขวงทุ่งครุ เขตทุ่งครุ\nกรุงเทพมหานคร 10140",
+    "contact.phone_1": "02-0069576",
+    "contact.phone_2": "080-4440310",
+    "contact.line_url": "https://line.me/ti/p/fHytGpcVOY",
+    "contact.map_url": "https://maps.app.goo.gl/kxzQrbXobM6NofU8A?g_st=il",
+    "contact.line_qr": "/line-qr.png"
+  }
+}

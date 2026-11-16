@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+const base=process.argv[2]||'http://127.0.0.1:4173';let password='';process.stdin.setRawMode(true);console.log('Ready for test password on hidden stdin.');password=await new Promise(resolve=>{let value='';const onData=chunk=>{value+=chunk.toString();if(/[\r\n]/.test(value)){process.stdin.off('data',onData);process.stdin.setRawMode(false);process.stdin.pause();resolve(value.trim())}};process.stdin.on('data',onData)});
+let session='',backup=null,restoreVersion=null;
+async function call(action,method='GET',data,authenticated=true){const response=await fetch(`${base}/api/admin?action=${action}`,{method,headers:{Origin:base,...(data?{'Content-Type':'application/json'}:{}),...(authenticated&&session?{Cookie:session}:{})},body:data?JSON.stringify(data):undefined});return {status:response.status,data:await response.json(),cookie:response.headers.get('set-cookie')}}
+try{
+ assert.equal((await call('content')).status,401);const login=await call('login','POST',{username:'admin',password});assert.equal(login.status,200);session=login.cookie.split(';')[0];const current=await call('content');assert.equal(current.status,200);assert(current.data.schema.fields.length>=60);const heroFields=current.data.schema.fields.filter(f=>f.group==='hero');backup=Object.fromEntries(heroFields.map(f=>[f.key,current.data.data[f.key]]));
+ const invalid=await call('content','PUT',{group:'hero',version:current.data.version,values:{...backup,'hero.title':''}});assert.equal(invalid.status,400);
+ const stale=await call('content','PUT',{group:'hero',version:0,values:backup});assert.equal(stale.status,409);
+ const changed=await call('content','PUT',{group:'hero',version:current.data.version,values:{...backup,'hero.title':'Temporary content verification'}});assert.equal(changed.status,200);restoreVersion=changed.data.version;
+ const publicData=await fetch(`${base}/api/content`).then(r=>r.json());assert.equal(publicData.data['hero.title'],'Temporary content verification');assert(!publicData.schema);
+ console.log('PASS: protected content API, input validation, conflict detection, saving and public content response.');
+}finally{if(restoreVersion){const restored=await call('content','PUT',{group:'hero',version:restoreVersion,values:backup});assert.equal(restored.status,200,'Content restore failed');console.log('Original website content restored.')}if(session)await call('logout','POST',{})}

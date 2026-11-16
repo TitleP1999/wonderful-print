@@ -1,6 +1,7 @@
 import { randomBytes, randomUUID } from 'node:crypto';
 import { put } from '@vercel/blob';
 import sharp from 'sharp';
+import {getContent,updateContent,schema} from '../lib/content.js';
 import {db,digest,hashPassword,checkPassword,send,error,body,sameOrigin,cookie,setSession,requireAdmin,photoInput,report} from '../lib/core.js';
 export default async function handler(req,res){
  res.setHeader('X-Robots-Tag','noindex, nofollow');
@@ -21,6 +22,8 @@ export default async function handler(req,res){
   }
   const admin=await requireAdmin(req);
   if(action==='session'&&req.method==='GET')return send(res,200,{username:admin.username});
+  if(action==='content'&&req.method==='GET')return send(res,200,{...await getContent(),schema:{groups:schema.groups,fields:schema.fields}});
+  if(action==='content'&&req.method==='PUT')return send(res,200,await updateContent(body(req)));
   if(action==='logout'&&req.method==='POST'){await sql`DELETE FROM wp_sessions WHERE token_hash=${digest(cookie(req))}`;setSession(res,'',true);return send(res,200,{ok:true})}
   if(action==='data'&&req.method==='GET'){
    const [photos,categories]=await Promise.all([sql`SELECT p.*,c.label AS category_label FROM wp_photos p JOIN wp_categories c ON c.key=p.category ORDER BY p.sort_order,p.id`,sql`SELECT * FROM wp_categories ORDER BY sort_order,key`]);

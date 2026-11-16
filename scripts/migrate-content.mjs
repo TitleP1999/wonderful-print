@@ -1,0 +1,3 @@
+import {readFile} from 'node:fs/promises';import {db} from '../lib/core.js';import {schema} from '../lib/content.js';
+const env=await readFile('.env.local','utf8');for(const line of env.split(/\r?\n/)){const m=line.match(/^([A-Z_]+)="?(.*?)"?$/);if(m)process.env[m[1]]=m[2].replace(/\\n/g,'\n')}
+const sql=db();await sql`CREATE TABLE IF NOT EXISTS wp_content (id integer PRIMARY KEY CHECK (id=1),data jsonb NOT NULL DEFAULT '{}'::jsonb,version integer NOT NULL DEFAULT 1,updated_at timestamptz NOT NULL DEFAULT now())`;await sql`INSERT INTO wp_content (id,data) VALUES (1,${JSON.stringify(schema.defaults)}::jsonb) ON CONFLICT (id) DO NOTHING`;console.log('Editable website content initialized.');
