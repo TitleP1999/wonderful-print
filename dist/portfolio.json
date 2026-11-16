@@ -383,5 +383,61 @@
     "title": "กราฟิกบูธงานแสดงสินค้า",
     "width": 1536,
     "height": 2048
+  },
+  {
+    "id": 1101,
+    "category": "standee",
+    "title": "ป้ายไดคัต DeeDo Win Win",
+    "width": 853,
+    "height": 480
+  },
+  {
+    "id": 1102,
+    "category": "standee",
+    "title": "ป้ายไดคัตแคมเปญเทศกาลเจ",
+    "width": 640,
+    "height": 480
+  },
+  {
+    "id": 1103,
+    "category": "standee",
+    "title": "ป้ายโปรโมชั่นหน้าร้าน",
+    "width": 640,
+    "height": 480
+  },
+  {
+    "id": 1104,
+    "category": "standee",
+    "title": "สแตนดี้ไดคัตรูปขวด DeeDo",
+    "width": 853,
+    "height": 480
+  },
+  {
+    "id": 1105,
+    "category": "standee",
+    "title": "ชุดป้ายไดคัตและสื่อโปรโมชั่นเทศกาลเจ",
+    "width": 640,
+    "height": 480
+  },
+  {
+    "id": 1106,
+    "category": "installation",
+    "title": "งานติดตั้งสื่อโฆษณาป้ายไฟภายในร้าน",
+    "width": 480,
+    "height": 640
+  },
+  {
+    "id": 1107,
+    "category": "standee",
+    "title": "ป้ายไดคัตประชาสัมพันธ์เครื่องดื่ม Mikku",
+    "width": 647,
+    "height": 480
+  },
+  {
+    "id": 1108,
+    "category": "standee",
+    "title": "ป้ายไดคัตโปรโมชั่นเครื่องดื่ม DeeDo",
+    "width": 658,
+    "height": 480
   }
 ]
