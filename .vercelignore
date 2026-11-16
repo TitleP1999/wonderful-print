@@ -2,3 +2,7 @@
 .env*
 .openai
 README.md
+node_modules
+.tmp
+test
+scripts

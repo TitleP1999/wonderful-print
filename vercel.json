@@ -1,1 +1,1 @@
-{"outputDirectory":"dist","cleanUrls":true,"buildCommand":null,"installCommand":null,"framework":null}
+{"outputDirectory":"dist","cleanUrls":true,"buildCommand":null,"installCommand":"npm ci","framework":null,"functions":{"api/*.js":{"includeFiles":"dist/portfolio.json","maxDuration":30}}}

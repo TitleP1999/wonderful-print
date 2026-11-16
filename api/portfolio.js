@@ -1,0 +1,2 @@
+import {db,send,report} from '../lib/core.js';
+export default async function handler(req,res){try{if(req.method!=='GET')return send(res,405,{error:'Method not allowed'});const sql=db();const [photos,categories]=await Promise.all([sql`SELECT id,title,category,thumb_url,full_url,width,height,sort_order FROM wp_photos WHERE visible=true AND deleted_at IS NULL ORDER BY sort_order,id`,sql`SELECT key,label,sort_order FROM wp_categories ORDER BY sort_order,key`]);return send(res,200,{photos,categories})}catch(e){return report(res,e)}}
