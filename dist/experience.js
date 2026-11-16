@@ -6,7 +6,7 @@
   function closeMenu(){toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','เปิดเมนู');toggle.textContent='☰';links.classList.remove('open')}
   toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'ปิดเมนู':'เปิดเมนู');toggle.textContent=open?'×':'☰';links.classList.toggle('open',open)});
   links.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenu();toggle.focus()}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&toggle.getAttribute('aria-expanded')==='true'){closeMenu();toggle.focus()}});
   matchMedia('(min-width: 801px)').addEventListener('change',e=>{if(e.matches)closeMenu()});
   document.querySelectorAll('.hero-inner>div:first-child>*').forEach(el=>el.classList.add('hero-enter'));
   const revealTargets=document.querySelectorAll('.sectionhead,.card,.aboutgrid>div,.visiongrid>div,.promise>div,.contact .wrap>div');
